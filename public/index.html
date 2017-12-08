@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.css">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>Document</title>
+
+</head>
+<body>
+
+    <div id='countrySearch' class="container">
+        <div class="row">
+            <div class="col-xl align-self-center">
+                <div class="mainContainer">
+                    <div class="innerContainer">
+
+                        <div class="input-group">
+                            <form class="input-group">
+                                <input id='input' list="countries" type="text" class="form-control" placeholder="Search for..." aria-label="Search for..." data-bind='textInput: inputValue'>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-secondary" type="submit" data-bind='click: addCountry'>Add</button>
+                                </span>
+                            </form> 
+                        </div>
+
+                        <datalist id='countries' class="countriesListContainer">
+                            <ul class="countriesList" data-bind='foreach: countriesList'>
+                                <option class="country" data-bind='text: na'></option>
+                            </ul>
+                        </datalist>
+
+                        <h3 class="header">Countries</h3>
+                        <div>
+                            <ul class="addedCountryList" data-bind='foreach: addedCountries'>
+                                <li class="addedCountry">
+                                    <span data-bind='text: country'></span>
+                                    <a class="removeCountry" href="#" data-bind="click: $parent.removeCountry">(remove)</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div data-bind='visible: !addedCountries().length'>
+                            <span>No added countries</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        <div>
+    </div>
+
+</body>
+
+<script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+<script src="main.js"></script>
+</html>

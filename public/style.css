@@ -1,0 +1,47 @@
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.innerContainer {
+    width: 300px;
+}
+
+.countriesListContainer {
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    height: 200px;  
+}
+
+.countriesList{
+    height: 100%;
+    overflow: auto;
+    padding-left: 0px;
+}
+
+.country {
+    padding-left: 10px;
+    list-style-type: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+
+.addedCountryList {
+    padding-left: 0px;
+}
+
+.addedCountry {
+    list-style-type: none;
+}
+
+.removeCountry {
+    font-size: 14px;
+    float: right;
+}
+
+.header {
+    margin-top: 10px;
+    font-size: 20px;
+}
